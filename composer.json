@@ -1,0 +1,15 @@
+{
+  "autoload" : {
+    "classmap" : [
+      "./"
+    ]
+  },
+  "require": {
+    "layershifter/tld-extract": "^2.0",
+    "nesbot/carbon": "^2.57",
+    "verot/class.upload.php": "dev-master",
+    "wixel/gump": "^1.12",
+    "jwhennessey/phpinsight":"dev-master",
+    "intervention/image": "^2.7"
+  }
+}

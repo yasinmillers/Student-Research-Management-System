@@ -85,10 +85,10 @@
                                                 <td class="text-right">
                                                     <a href="/editapaper/<?= $i->id ?>"
                                                         class="btn btn-default btn-xs ripple" data-toggle="tooltip"
-                                                        data-placement="top" title="" data-original-title="Edit"><span
-                                                            class="ink animate"
+                                                        data-placement="top" title=""
+                                                        data-original-title="approval"><span class="ink animate"
                                                             style="height: 22px; width: 22px; top: -4px; left: -6.1875px;"></span><i
-                                                            class="fa fa-pencil"></i></a>
+                                                            class="fa fa-check"></i></a>
                                                     <a href="/editapaper/<?= $i->id ?>"
                                                         class="btn btn-default btn-xs ripple" data-toggle="tooltip"
                                                         data-placement="top" title="" data-original-title="Edit"><span

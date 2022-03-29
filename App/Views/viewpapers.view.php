@@ -127,7 +127,7 @@
                 <li><a href="#">»</a></li>
               </ul>
             </div> -->
-                                <button>uber</button>
+                                <li><a href="/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
                             </div>
                         </div>
                     </div>

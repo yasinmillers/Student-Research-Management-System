@@ -128,15 +128,16 @@
               </ul>
             </div> -->
                                 <a href="">
-                                    <i class="fa fa-sign-out"></i>comments
+                                    <button type="button" class="btn btn-secondary">Comments</button>
                                 </a><span>
                                     <a href="">
-                                        <iconv class="fa fa-sign-out"></i>comments
+                                        <button type="button" class="btn btn-secondary">Feedback</button>
                                     </a>
                                 </span>
                                 <span>
-                                    <a href=""><i class=></i>comments</a>
+                                    <button type="button" class="btn btn-secondary">Marks</button>
                                 </span>
+                                <button type="button" class="btn btn-secondary">Status</button>
                             </div>
                         </div>
                     </div>

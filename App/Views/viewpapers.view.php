@@ -127,7 +127,16 @@
                 <li><a href="#">»</a></li>
               </ul>
             </div> -->
-                                <li><a href="/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
+                                <a href="">
+                                    <i class="fa fa-sign-out"></i>comments
+                                </a><span>
+                                    <a href="">
+                                        <iconv class="fa fa-sign-out"></i>comments
+                                    </a>
+                                </span>
+                                <span>
+                                    <a href=""><i class=></i>comments</a>
+                                </span>
                             </div>
                         </div>
                     </div>

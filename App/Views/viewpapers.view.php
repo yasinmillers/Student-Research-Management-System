@@ -127,7 +127,7 @@
                 <li><a href="#">»</a></li>
               </ul>
             </div> -->
-                                <a href="../commentpost.php">
+                                <a href="/commentpost/">
                                     <button type="button" class="btn btn-secondary">Comments</button>
                                 </a><span>
                                     <a href="">

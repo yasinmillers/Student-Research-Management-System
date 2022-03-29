@@ -1,7 +1,5 @@
 <?php
-mysql_connect("localhost", "root", "");
-mysql_select_db("cmtdb");
-error_reporting(E_ALL ^ E_NOTICE);
+include 'config.php';
 $notify = "";
 $name = $_POST['name'];
 $comment = $_POST['comment'];

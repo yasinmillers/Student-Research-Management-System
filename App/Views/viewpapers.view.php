@@ -127,7 +127,7 @@
                 <li><a href="#">»</a></li>
               </ul>
             </div> -->
-                                <a href="">
+                                <a href="https://www.google.com">
                                     <button type="button" class="btn btn-secondary">Comments</button>
                                 </a><span>
                                     <a href="">

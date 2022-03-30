@@ -135,11 +135,11 @@
                                     </colgroup>
                                     <table>
                                         <tr>
-                                            <td><label for="name">Name</label></td>
-                                            <td><input type="text" name="supervisor" /></td>
+                                            <!-- <td><label for="name"></label></td>
+                                            <td><input type="text" name="supervisor" /></td> -->
                                         </tr>
                                         <tr>
-                                            <td><label for="comment">Comment:</label></td>
+                                            <td><label for="comment"></label></td>
                                             <td><textarea name="comment" rows="10" cols="50"></textarea></td>
                                         </tr>
                                         <tr>

@@ -66,13 +66,10 @@ $getquery = mysqli_query($sql); ?>
             <col widht="75%" style="vertical-align:top;" />
         </colgroup>
         <table>
+
             <tr>
-                <td><label for="name">Name</label></td>
-                <td><input type="text" name="name" /></td>
-            </tr>
-            <tr>
-                <td><label for="comment">Comment:</label></td>
-                <td><textarea name="comment" rows="10" cols="50"></textarea></td>
+                <td><label for="comment"></label></td>
+                <td><textarea name="" rows="10" cols="50"></textarea></td>
             </tr>
             <tr>
                 <td colspan="2"><input type="submit" name="submit" value="Comment"></td>

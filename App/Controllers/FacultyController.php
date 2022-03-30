@@ -196,6 +196,24 @@ class FacultyController
         if (isset($_SESSION['email']) && isset($_SESSION['type'])) {
             if ($_SESSION['type'] == 'Faculty') {
                 //ode here
+            
+$name = $_POST['name'];
+$comment = $_POST['comment'];
+$submit = $_POST['submit'];
+if (isset($_POST['notify_box'])) {
+    $notify = $_POST['notify_box'];
+}
+
+if ($submit) {
+    if ($name && $comment) {
+        $insert = mysql_query("INSERT INTO comment (name,comment) VALUES
+    ('$name','$comment') ");
+    } else {
+        echo " please fill out all fields";
+    }
+}
+
+//code here
             } else {
                 \nextpagealert("error", "You Are Not Allowed in Faculty Area ! ");
                 header('Location: /login');

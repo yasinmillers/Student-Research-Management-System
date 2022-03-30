@@ -188,6 +188,35 @@ class FacultyController
             header('Location: /login');
         }
     }
+    public function comment()
+    {
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
+        if (isset($_SESSION['email']) && isset($_SESSION['type'])) {
+            if ($_SESSION['type'] == 'Faculty') {
+              
+                try {
+                    $paper = App::get('database')->selectOne('paper', 'Paper', 'id', $id);
+                    $students = App::get('database')->query('student', 'Student', " where id in (select stdid from factostd where facid = {$_SESSION['id']}) order by createdat desc");
+                    $user = App::get('database')->selectOne('faculty', 'Faculty', 'id', $_SESSION['id']);
+                    $user = $user[0];
+                    $paper = $paper[0];
+                    $title = 'Edit Paper';
+                    return view('editaPaper', compact('title', 'paper', 'user', 'students'));
+                } catch (PDOException $e) {
+                    $e->getMessage();
+                    error_log("DB Error : " . $e->getMessage());
+                }
+            } else {
+                \nextpagealert("error", "You Are Not Allowed in Faculty Area ! ");
+                header('Location: /login');
+            }
+        } else {
+            \nextpagealert("success", "Please Login !");
+            header('Location: /login');
+        }
+    }
 
     public function editapaperprocess($id = null)
     {

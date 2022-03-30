@@ -127,8 +127,8 @@
                 <li><a href="#">»</a></li>
               </ul>
             </div> -->
-                                <a href="/commentpost/">
-                                    <button type="button" class="btn btn-secondary">Comments</button>
+                                <a href="/editapaper/">
+                                    <button type=" button" class="btn btn-secondary">Comments</button>
                             </div>
                         </div>
                     </div>

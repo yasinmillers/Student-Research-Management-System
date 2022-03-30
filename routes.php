@@ -14,6 +14,7 @@ $routes->post('login', 'PagesController@loginProcess');
 // StudentController
 $routes->get('Student', 'StudentController@Student');
 $routes->get('addPaper', 'StudentController@addpaper');
+$routes->get('addProposal', 'StudentController@addpaper');
 $routes->get('viewpapers', 'StudentController@viewpapers');
 $routes->get('viewPaper', 'StudentController@viewpaper');
 $routes->get('editPaper', 'StudentController@editPaper');

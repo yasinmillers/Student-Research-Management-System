@@ -41,7 +41,7 @@
                                         <input type="text" name="title" id="title" placeholder="Title"
                                             class="form-control used"><span class="ma-form-highlight"></span><span
                                             class="ma-form-bar"></span>
-                                        <label for="title">Title </label>
+                                        <label for="title">Title of your Research Proposal</label>
                                     </div>
                                     <div class="form-group">
                                         <label for="body">Summary</label>
@@ -51,15 +51,15 @@
                                         <span>Select Supervisor</span>
                                         <select id="selector" name="facid">
                                             <?php
-                      if (count($faculty > 0)) {
-                        foreach ($faculty as $i) {
-                      ?>
+                                            if (count($faculty > 0)) {
+                                                foreach ($faculty as $i) {
+                                            ?>
                                             <option value="<?= $i->id ?>">
                                                 <?= ucwords($i->fname) . ' ' . ucwords($i->lname) ?></option>
                                             <?php
-                        }
-                      }
-                      ?>
+                                                }
+                                            }
+                                            ?>
                                         </select>
                                     </div>
                                     <div class="form-group">

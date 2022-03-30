@@ -20,12 +20,12 @@
                     </li>
                     <?php endif; ?>
                     <?php if ($_SESSION['type'] == 'Student') : ?>
-                    <li class="list-group-item"><a class="link-text-color" href="/addPaper">Create Team</a></li>
-                    <li class="list-group-item"><a class="link-text-color" href="/viewpapers">My Team</a>
+
+                    <li class="list-group-item"><a class="link-text-color" href="/viewallstudents">My Team</a>
                     <li class="list-group-item"><a class="link-text-color" href="/addPaper">Add Research Idea</a></li>
                     <li class="list-group-item"><a class="link-text-color" href="/viewpapers">View Research idea</a>
                     </li>
-                    <li class="list-group-item"><a class="link-text-color" href="/addPaper">Add Research Proposal</a>
+                    <li class="list-group-item"><a class="link-text-color" href="/addProposal">Add Research Proposal</a>
                     </li>
                     <li class="list-group-item"><a class="link-text-color" href="/viewpapers">View Research Proposal</a>
                     </li>

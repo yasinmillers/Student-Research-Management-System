@@ -73,6 +73,34 @@ class StudentController
         }
     }
 
+    public function addProposal($username = null)
+    {
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
+        if (isset($_SESSION['id']) && isset($_SESSION['type'])) {
+            if ($_SESSION['type'] == 'Student') {
+                try {
+                    $faculty = App::get('database')->query('faculty', 'Faculty', " where id in (select facid from factostd where stdid = {$_SESSION['id']})order by createdat desc");
+                    $user = App::get('database')->selectOne('student', 'Student', 'id', $_SESSION['id']);
+                    $user = $user[0];
+                    $title = 'Add New proposal';
+                    return view('addpaper', compact('title', 'user', 'faculty'));
+                } catch (PDOException $e) {
+                    $e->getMessage();
+                    error_log("DB Error : " . $e->getMessage());
+                }
+            } else {
+                \nextpagealert("error", "You Are Not Allowed in Student Area ! ");
+                header('Location: /login');
+            }
+        } else {
+            \nextpagealert("success", "Please Login !");
+            header('Location: /login');
+        }
+    }
+
+
     public function addpaperprocess($id = null)
     {
         if (session_status() !== PHP_SESSION_ACTIVE) {

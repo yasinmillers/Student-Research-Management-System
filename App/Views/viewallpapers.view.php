@@ -136,7 +136,7 @@
                                     <table>
                                         <tr>
                                             <td><label for="name">Name</label></td>
-                                            <td><input type="text" name="name" /></td>
+                                            <td><input type="text" name="supervisor" /></td>
                                         </tr>
                                         <tr>
                                             <td><label for="comment">Comment:</label></td>

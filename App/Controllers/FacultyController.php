@@ -196,22 +196,25 @@ class FacultyController
         if (isset($_SESSION['email']) && isset($_SESSION['type'])) {
             if ($_SESSION['type'] == 'Faculty') {
                 //ode here
-            
-$name = $_POST['name'];
-$comment = $_POST['comment'];
-$submit = $_POST['submit'];
-if (isset($_POST['notify_box'])) {
-    $notify = $_POST['notify_box'];
-}
-
-if ($submit) {
-    if ($name && $comment) {
-        $insert = mysql_query("INSERT INTO comment (name,comment) VALUES
-    ('$name','$comment') ");
-    } else {
-        echo " please fill out all fields";
-    }
-}
+        
+                $_POST = Gump::sanitize(Gump::xss_clean($_POST));
+                $value['commentid'] = $_POST['commentid'];
+                $value['supervisor'] = $_POST['supervisor'];
+                $value['comment'] = $_POST['comment'];
+             
+                try {
+                    if (App::get('database')->insert('comment', $value)) {
+                        nextpagealert("success", "comment was Uploaded Successfully!");
+                        header("Location: /viewallpapers");
+                    } else {
+                        nextpagealert("error", "An error occurred in uploading Paper!");
+                        header("Location: /viewallpapers");
+                    }
+                } catch (PDOException $e) {
+                    nextpagealert("error", "A database error occurred in uploading Paper!");
+                    \error_log("DB Error : " . $e->getMessage());
+                    header("Location: /viewallpapers");
+                }
 
 //code here
             } else {

@@ -127,8 +127,27 @@
                 <li><a href="#">»</a></li>
               </ul>
             </div> -->
-                                <a href="/editapaper/">
-                                    <button type=" button" class="btn btn-secondary">Comments</button>
+
+                                <form acttion="comment" method=" POST">
+                                    <colgroup>
+                                        <col widht="25%" style="vertical-align:top;" />
+                                        <col widht="75%" style="vertical-align:top;" />
+                                    </colgroup>
+                                    <table>
+                                        <tr>
+                                            <td><label for="name">Name</label></td>
+                                            <td><input type="text" name="name" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="comment">Comment:</label></td>
+                                            <td><textarea name="comment" rows="10" cols="50"></textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"><input type="submit" name="submit" value="Comment"></td>
+                                        </tr>
+                                    </table>
+                                </form>
+
                             </div>
                         </div>
                     </div>

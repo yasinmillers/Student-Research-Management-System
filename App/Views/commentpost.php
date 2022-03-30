@@ -15,7 +15,7 @@ if (isset($_POST['notify_box'])) {
 
 if ($submit) {
     if ($name && $comment) {
-        $insert = mysqli_query("INSERT INTO comment (name,comment) VALUES
+        $insert = mysql_query("INSERT INTO comment (name,comment) VALUES
     ('$name','$comment') ");
     } else {
         echo " please fill out all fields";
